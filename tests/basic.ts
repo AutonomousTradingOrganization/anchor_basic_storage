@@ -17,7 +17,8 @@ describe("basic", () => {
                   .initialize()
                     .accounts({storage: storage})
                       .rpc();
-    console.log("Your transaction signature", tx);
+    console.log("Your transaction signature :", tx);
+    console.log("https://solana.fm/tx/"+tx);
 
     const txRead  = await program.methods.read().accounts({storage: storage}).rpc();
     let data = await program.account.myStorage.fetch(storage);

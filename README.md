@@ -19,11 +19,13 @@ Example of an **Anchor project** well-structured like a boss !
 ├── programs
 │   └── basic
 │       ├── src
+│       │   ├── instructions
+│       │   │   ├── initialize.rs
+│       │   │   ├── mod.rs
+│       │   │   ├── read.rs
+│       │   │   └── write.rs
 │       │   ├── constants.rs
 │       │   ├── errors.rs
-│       │   ├── instruction_initialize.rs
-│       │   ├── instruction_read.rs
-│       │   ├── instruction_write.rs
 │       │   ├── lib.rs
 │       │   └── states.rs
 │       ├── Cargo.toml
@@ -33,6 +35,7 @@ Example of an **Anchor project** well-structured like a boss !
 ├── Anchor.toml
 ├── Cargo.lock
 ├── Cargo.toml
+├── deploy_local_test.png
 ├── package.json
 ├── README.md
 ├── tsconfig.json
@@ -41,7 +44,7 @@ Example of an **Anchor project** well-structured like a boss !
 
 ## Launch
 
-![](2024-07-09-09-42-32.png)
+![](deploy_local_test.png)
 
 ### Local validator
 
