@@ -27,6 +27,7 @@ Example of an **Anchor project** well-structured like a boss !
 │       │   ├── constants.rs
 │       │   ├── errors.rs
 │       │   ├── lib.rs
+│       │   ├── macros.rs
 │       │   └── states.rs
 │       ├── Cargo.toml
 │       └── Xargo.toml
