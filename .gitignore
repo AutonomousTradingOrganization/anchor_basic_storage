@@ -1,0 +1,14 @@
+
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+backup/
+.zipignore
+history.log
+versions.log
+solana_cfg.log
+test-ledger/
