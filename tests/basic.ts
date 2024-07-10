@@ -22,17 +22,16 @@ describe("basic", () => {
 
     const txRead  = await program.methods.read().accounts({storage: storage}).rpc();
     let data = await program.account.myStorage.fetch(storage);
-    console.log("data = ", data.data.toString());
+    console.log("data =", data.data.toString());
 
     const txWrite = await program.methods.write(new anchor.BN(1337)).accounts({storage: storage}).rpc();
 
     const txRead2 = await program.methods.read().accounts({storage: storage}).rpc();
     data = await program.account.myStorage.fetch(storage);
-    console.log("data = ", data.data.toString());
+    console.log("data =", data.data.toString());
 
     const all = await program.account.myStorage.all();
     console.log(all);
   });
-
 
 });
