@@ -4,6 +4,11 @@ use anchor_lang::{
 	/*solana_program::pubkey*/
 };
 
+#[account]
+pub struct MyStorage {
+	pub data: u64,
+}
+
 #[derive(Accounts)]
 pub struct Initialize<'info> {
 
@@ -20,11 +25,6 @@ pub struct Initialize<'info> {
 	pub authority: Signer<'info>,
 
 	pub system_program: Program<'info, System>,
-}
-
-#[account]
-pub struct MyStorage {
-	pub data: u64,
 }
 
 
