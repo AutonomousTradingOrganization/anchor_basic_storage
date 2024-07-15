@@ -3,10 +3,14 @@ use anchor_lang::{
 	prelude::*,
 	/*solana_program::pubkey*/
 };
+use std::mem::size_of;
+
+use crate::STR_SIZE_TITLE;
 
 #[account]
 pub struct MyStorage {
-	pub data: u64,
+	pub data : u64,
+	pub title: [u8; STR_SIZE_TITLE],
 }
 
 #[derive(Accounts)]
@@ -15,7 +19,7 @@ pub struct Initialize<'info> {
 	#[account(
 		init,
 		payer = authority,
-		space = 8 + 8,
+		space = 8 + size_of::<MyStorage>(),
 		seeds = [],
 		bump
 	)]
