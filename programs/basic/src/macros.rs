@@ -9,3 +9,12 @@ macro_rules! compute_fn {
 		res
 	};
 }
+
+macro_rules! string_to_u8 {
+    ($string:expr, $storage_title:expr) => {{
+        let bytes: &[u8] = $string.as_bytes();
+        let len = bytes.len().min($storage_title.len());
+        $storage_title[..len].copy_from_slice(&bytes[..len]);
+        //$storage_title
+    }};
+}
